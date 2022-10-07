@@ -1,0 +1,14 @@
+<h2>Atualizar Usuário</h2>
+
+<div *ngIf="request">
+  <label>Nome:
+    <!-- adicionar input com ngMode para request.name -->
+    <input type="text" [(ngModel)]="request.name" name="name" placeholder="Insira um nome" />
+  </label>
+  <br><br>
+  <label>Profissão:
+    <input type="text" [(ngModel)]="request.job" name="job" placeholder="Insira a Profissão" />
+  </label>
+  <br><br>
+  <button (click)="atualizar()" type="submit">Criar</button>
+</div>

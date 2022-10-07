@@ -1,0 +1,26 @@
+<h2>Criar Usuário</h2>
+
+<div>
+  <label>Nome:
+    <!-- adicionar input com ngMode para request.name -->
+    <input type="text" [(ngModel)]="request.name" name="name" placeholder="Insira um nome" />
+  </label>
+  <br><br>
+  <label>Profissão:
+    <input type="text" [(ngModel)]="request.job" name="job" placeholder="Insira a Profissão" />
+  </label>
+  <br><br>
+  <button (click)="save()" type="submit">Criar</button>
+</div>
+
+<br><br>
+<div *ngIf="response">
+  <h3>Criado com sucesso!</h3>
+  <label>Nome: {{response.name}}</label>
+  <br>
+  <label>Profissão: {{response.job}}</label>
+  <br>
+  <label>Id: {{response.id}}</label>
+  <br>
+  <label>Criado em: {{response.createdAt}}</label>
+</div>

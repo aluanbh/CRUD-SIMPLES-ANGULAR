@@ -1,0 +1,17 @@
+<h1>Usuários</h1>
+
+<table *ngIf="responseUsers">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Sobrenome</th>
+      <th>...</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of responseUsers.data">
+      <td>{{user.first_name}}</td>
+      <td>{{user.last_name}}</td>
+      <td> <a routerLink="/users/update/{{user.id}}">EDITAR</a> </td>
+    </tr>
+</table>
